@@ -56,11 +56,23 @@ class ListArray : public List<T> {
             out << "]";
             return out;
         }
+	// Busca un elemento y devuelve su posición (o -1 si no existe)
+        int search(T val) const override {
+            for (int i = 0; i < n; i++) {
+                if (arr[i] == val) {
+                    return i; // Elemento encontrado
+                }
+            }
+            return -1; // Elemento no encontrado
+        }
 
        // Devuelve el número de elementos actuales en la lista
         int size() const override {
             return n;
         }
+	bool empty() const override {
+		return n == 0;
+	}
 
         // Obtiene el elemento de una posición concreta
         T get(int pos) const override {
