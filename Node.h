@@ -12,7 +12,6 @@ class Node {
 
         // Método constructor
         Node(T data, Node<T>* next = nullptr) {  //un nodo necesita almacenar un dato (T data) y un puntero al siguiente nodo de su mismo tipo (Node<T>* next)
-                    //El parámetro Node<T>* next = nullptr indica que si al crear el nodo no le pasas un puntero, automáticamente asumirá el valor nulo (no apunta a nada).
             this->data = data;
             this->next = next;
         }
